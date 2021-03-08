@@ -1,8 +1,8 @@
-## Set-Location HKLM:​
-## New-Item -Path \SOFTWARE\Policies\Microsoft -Name FVE​
-## New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\FVE -Name UseAdvancedStartup -Value 1 ​
-## New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\FVE -Name EnableBDEWithNoTPM -Value 1 ​
-## Write-Host "Hey..!! I am here to compare the password you are entering..."​
+Set-Location HKLM:​
+New-Item -Path \SOFTWARE\Policies\Microsoft -Name FVE​
+New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\FVE -Name UseAdvancedStartup -Value 1 ​
+New-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\FVE -Name EnableBDEWithNoTPM -Value 1 ​
+Write-Host "Hey..!! I am here to compare the password you are entering..."​
 
 $drive = Read-Host "Enter drive to encrypt ('C:', 'D:', etc.): "
 $pwd1 = Read-Host -AsSecureString "Passowrd Required for Startup"
